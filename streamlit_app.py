@@ -1,25 +1,18 @@
 import streamlit as st
 from openai import OpenAI
 
-# Streamlit app title and description
-st.title("💬 RiskMind")
-st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-4 model to generate responses."
-)
+st.title("💬 RiskMind Chatbot")
+st.write("Ask anything and GPT-4 will answer.")
 
-# Ask user for their OpenAI API key
+# Ask for API key and prompt
 api_key = "17lh7nc1dbSmml1y6URAni4GliF7qzU8ECpC9erfFtmiqqTjKsnYc5TW__A8dpGXb4Jvy9hHg3T3BlbkFJvTIblH86Mi55z_iTaoEstTyCPJksSfgqRWpMR1QWUDuMEVBY2b4_kcL70WhccjeOpHj4FrGhEA"
+user_input = st.text_input("Ask a question:")
 
-# Get user input
-user_input = st.text_input("Ask me anything:")
-
-# Proceed if both API key and input are provided
 if api_key and user_input:
-    openai.api_key = api_key
-
-    # Call OpenAI API
     try:
-        response = openai.ChatCompletion.create(
+        client = OpenAI(api_key=api_key)
+
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
@@ -27,9 +20,8 @@ if api_key and user_input:
             ]
         )
 
-        # Display response
         st.write("### 🤖 Response:")
-        st.write(response['choices'][0]['message']['content'])
+        st.write(response.choices[0].message.content)
 
     except Exception as e:
         st.error(f"Error: {e}")
