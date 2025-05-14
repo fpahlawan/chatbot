@@ -8,7 +8,7 @@ st.write(
 )
 
 # Ask user for their OpenAI API key
-api_key = 17lh7nc1dbSmml1y6URAni4GliF7qzU8ECpC9erfFtmiqqTjKsnYc5TW__A8dpGXb4Jvy9hHg3T3BlbkFJvTIblH86Mi55z_iTaoEstTyCPJksSfgqRWpMR1QWUDuMEVBY2b4_kcL70WhccjeOpHj4FrGhEA
+api_key = "17lh7nc1dbSmml1y6URAni4GliF7qzU8ECpC9erfFtmiqqTjKsnYc5TW__A8dpGXb4Jvy9hHg3T3BlbkFJvTIblH86Mi55z_iTaoEstTyCPJksSfgqRWpMR1QWUDuMEVBY2b4_kcL70WhccjeOpHj4FrGhEA"
 
 # Get user input
 user_input = st.text_input("Ask me anything:")
