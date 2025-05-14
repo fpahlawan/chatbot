@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 
 # Streamlit app title and description
 st.title("💬 RiskMind")
