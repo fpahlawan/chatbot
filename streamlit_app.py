@@ -5,7 +5,7 @@ st.title("💬 RiskMind Chatbot")
 st.write("Ask anything and GPT-4 will answer.")
 
 # Ask for API key and prompt
-api_key = "17lh7nc1dbSmml1y6URAni4GliF7qzU8ECpC9erfFtmiqqTjKsnYc5TW__A8dpGXb4Jvy9hHg3T3BlbkFJvTIblH86Mi55z_iTaoEstTyCPJksSfgqRWpMR1QWUDuMEVBY2b4_kcL70WhccjeOpHj4FrGhEA"
+api_key = "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"
 user_input = st.text_input("Ask a question:")
 
 if api_key and user_input:
