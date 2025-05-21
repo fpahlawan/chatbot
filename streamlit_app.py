@@ -2,11 +2,11 @@ import streamlit as st
 from openai import OpenAI
 
 st.title("💬 RiskMind Chatbot")
-st.write("Ask anything and GPT-4 will answer.")
+st.write("Melakukan Identifikasi Risiko, Risk Level dan Mitigasi Risiko terhadap Inisiatif Bisnis / Objective Bisnis Unit.")
 
 # Ask for API key and prompt
 api_key = "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"
-user_input = st.text_input("Ask a question:")
+user_input = st.text_input("Type 'Start' please")
 
 if api_key and user_input:
     try:
