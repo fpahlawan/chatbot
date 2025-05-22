@@ -5,7 +5,7 @@ st.title("💬 RiskMind Chatbot")
 st.write("Melakukan Identifikasi Risiko, Risk Level dan Mitigasi Risiko terhadap Inisiatif Bisnis / Objective Bisnis Unit.")
 
 # Ask for API key and prompt
-api_key = "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"
+api_key = "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"
 user_input = st.text_input("Type 'Start' please")
 
 if api_key and user_input:
