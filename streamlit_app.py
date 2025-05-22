@@ -13,7 +13,7 @@ if api_key and user_input:
         client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": user_input}
